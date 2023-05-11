@@ -4,6 +4,11 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <PackageId>Stargazer.Abp.Captcha.HttpApi</PackageId>
+    <Authors>huangmingji</Authors>
+    <Company>Stargazer</Company>
+    <PackageDescription>一个基于ABP的验证码模块</PackageDescription>
+    <RepositoryUrl>https://github.com/huangmingji/Stargazer.Abp.Captcha</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
