@@ -5,8 +5,8 @@ namespace Stargazer.Abp.Captcha.HttpApi;
 public interface ICaptchaHelper
 {
 
-    void SetValue(HttpRequest request, HttpResponse response, string code);
+    void SetValue(HttpContext httpContext, string code);
 
-    bool IsVerified(HttpRequest request, HttpResponse response, string code);
+    bool IsVerified(HttpContext httpContext, string code);
 
 }
