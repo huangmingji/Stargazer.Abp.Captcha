@@ -27,8 +27,8 @@ namespace Stargazer.Abp.CMS.Web.Controllers
         {
             try
             {
-                var code = _securityCodeHelper.GetRandomEnDigitalText(6);
-                var imgbyte = _securityCodeHelper.GetGifEnDigitalCodeByte(code);
+                var code = _securityCodeHelper.GetRandomCnText(4);
+                var imgbyte = _securityCodeHelper.GetGifBubbleCodeByte(code);
                 _captchaHelper.SetValue(HttpContext, code: code);
                 return File(imgbyte, "image/gif");
             }

@@ -38,9 +38,7 @@ public class CaptchaHelper : ICaptchaHelper
         httpContext.Response.Cookies.Append(captchaKey, _stringEncryptionService.Encrypt(code), new CookieOptions()
         {
             Expires = DateTimeOffset.Now.AddMinutes(5),
-            HttpOnly = true,
-            SameSite = SameSiteMode.Lax,
-            Domain = httpContext.Request.Path
+            HttpOnly = true
         });
     }
 }
