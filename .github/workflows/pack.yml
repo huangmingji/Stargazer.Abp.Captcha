@@ -28,7 +28,7 @@ jobs:
       run: dotnet pack ./src/Stargazer.Abp.Captcha.HttpApi -c Release -p:PackageVersion=${{ github.ref_name }}
       
     - name: Push Stargazer.Abp.Captcha.HttpApi to github
-      run: dotnet nuget push ./src/Stargazer.Abp.Captcha.HttpApi/bin/Release/Stargazer.Abp.Captcha.HttpApi.*.nupkg --api-key ${{ secrets.GIT_PAT }} --source "https://nuget.pkg.github.com/huangmingji/index.json"
+      run: dotnet nuget push ./src/Stargazer.Abp.Captcha.HttpApi/bin/Release/Stargazer.Abp.Captcha.HttpApi.*.nupkg --skip-duplicate --source "https://nuget.pkg.github.com/huangmingji/index.json" --api-key ${{ secrets.GIT_PAT }} 
 
     - name: Push Stargazer.Abp.Captcha.HttpApi to nuget
       run: dotnet nuget push ./src/Stargazer.Abp.Captcha.HttpApi/bin/Release/Stargazer.Abp.Captcha.HttpApi.*.nupkg --skip-duplicate -s https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
