@@ -6,7 +6,7 @@ using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.Modularity;
 using Volo.Abp.Security;
 using Volo.Abp.Security.Encryption;
-using Lemon.Common.Extend;
+using Stargazer.Common.Extend;
 
 namespace Stargazer.Abp.Captcha.HttpApi;
 
